@@ -1,9 +1,12 @@
+import {CommonModule} from '@angular/common';
 import { Component } from '@angular/core';
+
+import { SinglefruitComponent } from "./singlefruit/singlefruit/singlefruit.component";
 
 @Component({
   selector: 'app-fruitlist',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, SinglefruitComponent],
   templateUrl: './fruitlist.component.html',
   styleUrl: './fruitlist.component.scss'
 })
@@ -58,4 +61,15 @@ export class FruitlistComponent {
       reviews:[{name: "Kevin W.", text: "Ganz gut in der Regel!"},{name: "Oliver J.", text: "Absoluter Favorit beim Frühstück"}],
     },
   ]
+
+  fontGood = "green";
+  fontBad = "red"
+
+  floorNum(zahl: number) {
+    return Math.floor(zahl);
+  }
+
+  nameLog(name:string) {
+    console.log(name);
+  }
 }
