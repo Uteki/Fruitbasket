@@ -28,6 +28,6 @@ export class SinglefruitComponent {
 
   sendInputData() {
     this.fruitName.emit(this.inputData);
-    console.log(this.inputData);
+    this.inputData = "";
   }
 }
