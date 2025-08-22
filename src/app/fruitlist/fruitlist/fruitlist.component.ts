@@ -22,7 +22,6 @@ export class FruitlistComponent {
   }
 
   addComment(comment:string, index:number){
-    console.log(comment);
     this.fruitlistdata.addCommentToFruit(comment, index);
   }
 
